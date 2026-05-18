@@ -1,0 +1,35 @@
+# agentwatch
+
+> React DevTools for browser-based AI agents. A Chrome MV3 extension drops a translucent overlay on every tab; a Python SDK runs a localhost WebSocket broadcaster. Your agent code pushes status updates and the overlay updates live.
+
+## Install (two pieces)
+1. Chrome extension — clone the repo and load `extension/` unpacked at `chrome://extensions` (Developer mode → Load unpacked).
+2. Python SDK: `pip install agentwatch`
+
+## Python usage
+```python
+from agentwatch import AgentWatch
+
+with AgentWatch() as aw:
+    aw.announce(goal="Book a flight SFO → JFK")
+    # ...agent runs...
+    aw.announce(step=2, last_action="Typed 'SFO'", next_action="Click destination field")
+```
+
+## Any other language
+Open a WebSocket to `ws://127.0.0.1:8765` and send JSON like:
+```json
+{"goal": "...", "last_action": "...", "next_action": "...", "step": 3, "error": null}
+```
+
+## Recognized fields rendered in the overlay
+| Field | Use |
+|-------|-----|
+| `goal` | Top-line objective. |
+| `last_action` | What the agent just did. |
+| `next_action` | What the agent is about to do. |
+| `step` | Optional counter / index. |
+| `error` | Highlighted in red. |
+
+## Why for AI agents
+If you're a browser-using agent, calling `agentwatch.announce(...)` before each action gives the human watching a real-time window into your decision-making. Bug repros and demo recordings become self-explanatory.

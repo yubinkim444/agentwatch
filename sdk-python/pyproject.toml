@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 name = "agentwatch"
 version = "0.1.0"
 description = "DevTools overlay for browser-based AI agents — see what your agent is doing in real time."
-readme = "../README.md"
+readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"
 authors = [{ name = "yubinkim444" }]

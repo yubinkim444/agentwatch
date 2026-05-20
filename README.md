@@ -4,7 +4,7 @@
 > Drop a translucent overlay onto every tab that shows what your agent is
 > trying to do, what it just clicked, and what it's about to do next.
 
-[![PyPI](https://img.shields.io/pypi/v/agentwatch)](https://pypi.org/project/agentwatch/)
+[![PyPI](https://img.shields.io/pypi/v/agentwatcher)](https://pypi.org/project/agentwatcher/)
 [![Chrome](https://img.shields.io/badge/Chrome-MV3-4285F4)]()
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)]()
 
@@ -65,7 +65,7 @@ disconnected (yellow) dot until your agent connects.
 ### 2. Install the SDK
 
 ```bash
-pip install agentwatch
+pip install agentwatcher
 ```
 
 ---

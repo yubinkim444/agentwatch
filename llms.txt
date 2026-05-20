@@ -4,7 +4,7 @@
 
 ## Install (two pieces)
 1. Chrome extension — clone the repo and load `extension/` unpacked at `chrome://extensions` (Developer mode → Load unpacked).
-2. Python SDK: `pip install agentwatch`
+2. Python SDK: `pip install agentwatcher`
 
 ## Python usage
 ```python

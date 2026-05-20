@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "agentwatch"
+name = "agentwatcher"
 version = "0.1.0"
 description = "DevTools overlay for browser-based AI agents — see what your agent is doing in real time."
 readme = "README.md"
